@@ -17,20 +17,15 @@ import java.io.BufferedReader;
 
 
 /**
- * @author jmcneil
- * (c) copyright Software Pulse 2020
+ * Client zum Anfragen des Webservices vom lds Übungsblatts. Größtenteils aus Quellcode aus dem Internet zusammengeführt.
  *
  */
 public class SoapClient {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
         SoapClient soapClient = new SoapClient();
         soapClient.getAddInteger(14, 33);
     }
-
 
     public void getAddInteger(int args1, int args2) {
         String wsURL = "https://crcind.com/csp/samples/SOAP.Demo.CLS";
@@ -103,6 +98,11 @@ public class SoapClient {
         }
     }
 
+    /**
+     * Funktion zum Konvertieren eines XML-Objekts im String-Format in ein Dokument-Objekt.
+     * @param in Zu konvertierender XML-String
+     * @return XML als Document-Objekt
+     */
     private Document parseXmlFile(String in) {
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
