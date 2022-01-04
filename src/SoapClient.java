@@ -89,7 +89,7 @@ public class SoapClient {
 
             NodeList nodeLst = document.getElementsByTagName("AddIntegerResult");
             String webServiceResponse = nodeLst.item(0).getTextContent();
-            System.out.println("The response from the web service call is : " + webServiceResponse);
+            System.out.println("Die Antwort von AddIntegerResult("+args1+", "+args2+") ist: " + webServiceResponse);
 
         }
         catch (Exception e)
